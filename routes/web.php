@@ -47,6 +47,14 @@ Route::get('/contact', function () {
     ]);
 });
 
+Route::get('/categories', function(){
+    return view('categories', [
+        "title" => "Post Categories",
+        "categories" => Category::all()
+    ]);
+});
+
+
 
 
 Route::get('/posts', [PostController::class, 'index']);
