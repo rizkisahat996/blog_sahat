@@ -18,6 +18,6 @@
 
     </article>
     @endforeach 
-    
+
 @endsection
 
