@@ -19,7 +19,7 @@
           @yield('container')
       </div>
       <footer>
-        <div class="text-center p-4 fixed-bottom" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-4 mt-5" style="background-color: rgba(0, 0, 0, 0.2);">
           © 1969 Copyright: PTsahat.
         </div>  
     </footer>

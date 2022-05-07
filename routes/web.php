@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Models\User;
 use App\Models\Category;
@@ -24,15 +25,17 @@ use App\Http\Controllers\RegisterController;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
+        "active" => 'home',
         "name" => "Rizki Sahat",
         "nim" => "211402030",
-        "image" => "sahat.jpg"
+        "image" => "sahat.jpg",
     ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",
+        "active" => 'about',
         "nama" => "Rizki Sahat Arapenta",
         "nim" => "211402030",
         "hobi" => "makan",
@@ -68,20 +71,21 @@ Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
 
 
-Route::get('/categories/{category:slug}', function(Category $category)
-{
-    return view('posts', [
-        'title' => "Post by Category : $category->name",
-        'posts' => $category->post->load('author', 'category')
-    ]);
-});
+// Route::get('/categories/{category:slug}', function(Category $category)
+// {
+//     return view('posts', [
+//         'title' => "Post by Category : $category->name",
+//         'posts' => $category->post->load('author', 'category')
+//     ]);
+// });
 
-Route::get('/authors/{author:username}', function(User $author){
-    return view('posts', [
-        'title' => "Post By Author : $author->name",
-        'posts' => $author->post->load('category', 'author'),
-    ]);
-});
+// Route::get('/authors/{author:username}', function(User $author){
+//     return view('posts', [
+//         'title' => "Post By Author : $author->name",
+//         'active' => 'posts',
+//         'posts' => $author->post->load('category', 'author'),
+//     ]);
+// });
 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
@@ -95,3 +99,5 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+Route::resource('/dashboard/categories', AdminCategoryController::class);
