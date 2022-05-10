@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\AdminCategoryController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardPostController;
 use App\Models\User;
 use App\Models\Category;
 
@@ -25,7 +24,6 @@ use App\Http\Controllers\RegisterController;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
-        "active" => 'home',
         "name" => "Rizki Sahat",
         "nim" => "211402030",
         "image" => "sahat.jpg",
@@ -35,7 +33,6 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",
-        "active" => 'about',
         "nama" => "Rizki Sahat Arapenta",
         "nim" => "211402030",
         "hobi" => "makan",
@@ -98,6 +95,8 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard', function(){
+    return view('dashboard.index');
+})->middleware('auth');
 
-Route::resource('/dashboard/categories', AdminCategoryController::class);
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
