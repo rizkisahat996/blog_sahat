@@ -1,13 +1,15 @@
 <?php
 
-use App\Http\Controllers\DashboardPostController;
 use App\Models\User;
 use App\Models\Category;
-
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\DashboardNabungController;
+use App\Http\Controllers\DashboardTabunganController;
 
 
 /*
@@ -100,3 +102,5 @@ Route::get('/dashboard', function(){
 })->middleware('auth');
 
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+Route::resource('/dashboard/nabung', DashboardNabungController::class)->middleware('auth');
+Route::resource('/dashboard/tabungan', DashboardTabunganController::class)->middleware('auth');
