@@ -10,6 +10,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\DashboardNabungController;
 use App\Http\Controllers\DashboardTabunganController;
+use App\Http\Controllers\BeritaController;
 
 
 /*
@@ -104,3 +105,5 @@ Route::get('/dashboard', function(){
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 Route::resource('/dashboard/nabung', DashboardNabungController::class)->middleware('auth');
 Route::resource('/dashboard/tabungan', DashboardTabunganController::class)->middleware('auth');
+
+Route::resource('/berita', BeritaController::class)->middleware('auth');
