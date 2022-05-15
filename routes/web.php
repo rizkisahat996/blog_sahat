@@ -109,4 +109,4 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 Route::resource('/dashboard/nabung', DashboardNabungController::class)->middleware('auth');
 Route::resource('/dashboard/tabungan', DashboardTabunganController::class)->middleware('auth');
 
-Route::resource('/berita', BeritaController::class)->middleware('auth');
+Route::resource('/berita', BeritaController::class);
