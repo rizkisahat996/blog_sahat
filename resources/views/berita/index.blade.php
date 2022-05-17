@@ -74,13 +74,62 @@
 </div>
 
 <!-- bagian tengah -->
-<div class="row justify-content-center mt-5 pt-3 pb-3 mx-0 px-5 h-auto d-inline-block w-auto p-3" style="background-color: #ffffff" >
+<div class="row justify-content-center mt-5 pt-3  mx-0 px-5  d-inline-block w-auto" style="background-color: #ffffff" id="tengah">
   <div class="container justify-content-center " style="background-color: rgba(196, 196, 196, 0.17);" id="blog">
     <h2>Berita Terkini</h2>
   </div>
-  <div class="container py-5">
+  <div class="container pt-5 ">
     <div class="card mb-3 border-0 pb-5" style="max-width: 600px;" class="card">
       <div class="row g-0">
+        <div class="col-md-4">
+          <img src="img/contoh1.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text" style="border-top: 2px solid #000000">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="img/contoh1.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text" style="border-top: 2px solid #000000">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="img/contoh1.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text" style="border-top: 2px solid #000000">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="img/contoh1.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text" style="border-top: 2px solid #000000">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div><div class="col-md-4">
+          <img src="img/contoh1.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text" style="border-top: 2px solid #000000">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
         <div class="col-md-4">
           <img src="img/contoh1.jpg" class="img-fluid rounded-start" alt="...">
         </div>
@@ -95,4 +144,5 @@
     </div>
   </div>
 </div>
+
 @endsection

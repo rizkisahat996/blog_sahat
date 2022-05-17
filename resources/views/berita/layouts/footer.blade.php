@@ -2,26 +2,7 @@
       
 
     <div class="d-flex justify-content-evenly">
-      <div class="row d-flex justify-content-center my-5 py-5" style="background-color: #ffffff" id="kanan">
-        <div class="justify-content-center" >
-          <div class="row justify-content-center" style="background-color: rgba(196, 196, 196, 0.17);" id="tulisan">
-            <h2>Galeri Foto</h2>
-          </div>
-        </div>
-        <div class="container">
-          <div class="d-flex justify-content-evenly ms-5 ps-5 my-5" id="vidio">
-              <ul class="list-group">
-                <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 150px" style="width: 150px" ></li>
-                <li> <img src="img/contoh2.jpg" class="rounded float-start" alt="..." style="height: 150px" style="width: 150px"></li>
-              </ul>
-              <ul class="list-group">
-                <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 150px" style="width: 150px"></li>
-                <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 150px" style="width: 150px"></li>
-              </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row d-flex justify-content-center my-5 py-5 ps-4" style="background-color: #ffffff" id="kiri">
+      <div class="row d-flex justify-content-center my-5 py-5 ps-1" style="background-color: #ffffff" id="kiri">
         <div class="justify-content-center" >
           <div class="row justify-content-center" style="background-color: rgba(196, 196, 196, 0.17);" id="tulisan">
             <h2>Galeri Video</h2>
@@ -29,21 +10,49 @@
         </div>
           
         <div class="container">
-          <div class="d-flex justify-content-evenly ms-5 ps-5 my-5" id="vidio">
-            <ul class="list-group">
-              <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 150px" style="width: 150px" ></li>
-              <li> <img src="img/contoh2.jpg" class="rounded float-start" alt="..." style="height: 150px" style="width: 150px"></li>
+          <div class="d-flex justify-content-evenly ms-1 ps-1 my-1 pt-3" id="vidio">
+            <ul class="list-group ">
+              <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 100px" style="width: 100px" ></li>
+
             </ul>
-            <ul class="list-group">
-              <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 150px" style="width: 150px"></li>
-              <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 150px" style="width: 150px"></li>
+            <ul class="list-group ">
+              <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 100px" style="width: 100px"></li>
+              
+            </ul>
+            <ul class="list-group ">
+              <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 100px" style="width: 100px"></li>
+             
+            </ul>
+        </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center my-5 py-5 ps-1" style="background-color: #ffffff" id="kiri">
+        <div class="justify-content-center pt-1" >
+          <div class="row justify-content-center" style="background-color: rgba(196, 196, 196, 0.17);" id="tulisan">
+            <h2>Galeri Video</h2>
+          </div>
+        </div>
+          
+        <div class="container">
+          <div class="d-flex justify-content-evenly ms-1 ps-1 my-1 pt-2" id="vidio">
+            <ul class="list-group ">
+              <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 100px" style="width: 100px" ></li>
+
+            </ul>
+            <ul class="list-group ">
+              <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 100px" style="width: 100px"></li>
+              
+            </ul>
+            <ul class="list-group ">
+              <li> <img src="img/contoh1.jpg" class="rounded float-start" alt="..." style="height: 100px" style="width: 100px"></li>
+             
             </ul>
         </div>
         </div>
       </div>
     </div>
-  </footer>
-  <div class="container" id="foot">
+</footer>
+<div class="container" id="foot">
     <footer>
       <div class="container justify-content-evenly" id="tul">
         <div class="row">
@@ -68,4 +77,4 @@
       </div>
       </div>
     </footer>
-  </div>
+</div>
