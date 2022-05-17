@@ -26,20 +26,20 @@
         <div class="col-sm-3 mt-3" style="background-color: rgba(196, 196, 196, 0.17);" id="ba">
             <h2>Berita Terpopuler</h2>
         </div>
-        <div class="d-flex flex-row-5  pt-2 mt-5 ">
-            <div class="card border-0" style="width: 15rem;">
+        <div class="d-flex flex-row-sm-2  pt-2 mt-5 gap-2" >
+            <div class="card border-0 float-lg-start"  id="k">
                 <img src="img/contoh2.jpg" class="card-img-top" alt="...">
                 <div class="card-body ">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
             </div>
-            <div class="card ms-2 border-0" style="width: 15rem;">
+            </div>
+            <div class="card ms-2 border-0 float-lg-start"  id="k">
                 <img src="img/contoh2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
-            <div class="card ms-2 border-0" style="width: 15rem;">
+            <div class="card ms-2 border-0 float-lg-start"  id="k">
                 <img src="img/contoh2.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
