@@ -36,13 +36,6 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",
-        "nama" => "Rizki Sahat Arapenta",
-        "nim" => "211402030",
-        "hobi" => "makan",
-        "asalSma" => "primbana",
-        "alasanmasukti" => "biar dapet laptop gaming",
-        "teknologiyangdikuasai" => "windows explorer",
-        "icon" => "namaa.png"
     ]);
 });
 
@@ -110,3 +103,7 @@ Route::resource('/dashboard/nabung', DashboardNabungController::class)->middlewa
 Route::resource('/dashboard/tabungan', DashboardTabunganController::class)->middleware('auth');
 
 Route::resource('/berita', BeritaController::class);
+
+Route::get('/a', function(){
+    return view('berita.post');
+});
