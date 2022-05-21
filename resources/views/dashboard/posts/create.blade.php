@@ -6,7 +6,7 @@
 </div>
 
 <div class="col-lg-8">
-    <form method="POST" action="/dashboard/posts" class="mb-5">
+    <form method="POST" action="/dashboard/posts" class="mb-5" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
@@ -39,8 +39,13 @@
             </select>
         </div>
         <div class="mb-3">
-            <label for="formFile" class="form-label">Default file input example</label>
-            <input class="form-control" type="file" id="formFile">
+            <label for="image" class="form-label">Masukkan Gambar</label>
+            <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image">
+            @error('image')
+              <div class="invalid-feedback">
+                  {{ $message }}
+              </div>
+          @enderror
           </div>
         <div>
           <label for="body" class="form-label">Body</label>
