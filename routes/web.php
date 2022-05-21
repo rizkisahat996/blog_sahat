@@ -105,6 +105,5 @@ Route::resource('/dashboard/tabungan', DashboardTabunganController::class)->midd
 Route::resource('/berita', BeritaController::class);
 
 Route::get('/a', function(){
-    
     return view('berita.post');
 });

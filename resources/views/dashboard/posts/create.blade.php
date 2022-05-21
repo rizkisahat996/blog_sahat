@@ -18,7 +18,7 @@
           @enderror
         </div>
         <div class="mb-3">
-          <label for="slug" class="form-label">Slug</label>
+          <label for="slug" class="form-label">Slug</label> 
           <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" value="{{ old('slug') }}">
           @error('slug')
               <div class="invalid-feedback">
@@ -38,6 +38,10 @@
               @endforeach
             </select>
         </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
         <div>
           <label for="body" class="form-label">Body</label>
           @error('body')

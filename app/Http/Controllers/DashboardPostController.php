@@ -19,7 +19,7 @@ class DashboardPostController extends Controller
     {
         return view('dashboard.posts.index', [
             'posts' => Post::where('user_id', auth()->user()->id)->get()
-        ]);
+        ]); 
     }
 
     /**
