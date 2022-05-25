@@ -42,7 +42,7 @@
             <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more</a>
         </div>
       </div>
-      
+
 
   <div class="container">
     
