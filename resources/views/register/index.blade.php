@@ -18,6 +18,15 @@
             @enderror
           </div>
           <div class="form-floating">
+            <input type="text" name="nis" class="form-control rounded-top @error('nis')is-invalid @enderror" id="nis" placeholder="123456789000" required value="{{ old('nis')}}">
+            <label for="nis">NIS</label>
+            @error('nis')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+            @enderror
+          </div>
+          <div class="form-floating">
             <input type="text" name="username" class="form-control @error('username')is-invalid @enderror" id="username" placeholder="username" required value="{{ old('username') }}">
             <label for="username">Username</label>
             @error('username')
