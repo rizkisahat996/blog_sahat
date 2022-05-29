@@ -3,7 +3,7 @@
 @section('container')
 
 <div class="justify-content-center mt-5 pt-3  mx-0 px-5  d-inline-block row t   ms-5  p-5" style="background-color: #ffffff" id="teng">
-    <div class="container px-3 mx-3 "> <h1 class="ms-3">judul berita</h1>
+    <div class="container px-3 mx-3 "> <h1 class="ms-3" style="font-family: Roboto,sans-serif;">Judul berita</h1>
         <ul  class="list-group list-group-horizontal-sm" id="li">
             <li class="list-group-item border-0"><span class="bi bi-clock"></span> Medan</li>
             <li class="list-group-item border-0"><span class="bi bi-person"></span> admin</li>

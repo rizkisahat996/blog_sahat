@@ -107,3 +107,9 @@ Route::resource('/berita', BeritaController::class);
 Route::get('/a', function(){
     return view('berita.post');
 });
+
+
+//work  
+Route::get('/b', function(){
+    return view('berita.dashboard.index');
+});
