@@ -53,6 +53,9 @@ Route::get('/categories', function(){
     ]);
 });
 
+Route::get('/ww', function () {
+    return view('dashboard.indexx');
+});
 
 
 
