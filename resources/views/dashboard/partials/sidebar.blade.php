@@ -89,5 +89,17 @@
         <span class="menu-title">Tables</span>
       </a>
     </li>
+    <li class="nav-item menu-items">
+      <a href="/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link" type="submit">
+        <span class="menu-icon">
+          <i class="mdi mdi mdi-logout"></i>
+        </span>
+          {{-- <button type="submit" class="nav-link px-3 bg-dark border-0">Logout<span data-feather="log-out"></span></a></button> --}}
+        <span class="menu-title">Logout</span>
+      </a>
+      <form id="logout-form" action="/logout" method="post" style="display: none">
+        @csrf
+    </form>
+    </li>
   </ul>
 </nav>
