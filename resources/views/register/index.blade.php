@@ -1,7 +1,7 @@
-@extends('layouts.main')
+@extends('login.layouts.main')
 
 @section('container')
-<div class="row justify-content-center">
+<div class="row justify-content-center container-fluid">
   <div class="col-lg-5">
     
     <main class="form-registration">

@@ -27,22 +27,6 @@ use App\Http\Controllers\BeritaController;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
-        "name" => "Rizki Sahat",
-        "nim" => "211402030",
-        "image" => "sahat.jpg",
-    ]);
-});
-
-Route::get('/about', function () {
-    return view('about', [
-        "title" => "About",
-    ]);
-});
-
-Route::get('/contact', function () {
-    return view('contact', [
-        "title" => "Contact",
-        "whatsapp" => "083115630741"
     ]);
 });
 
@@ -52,12 +36,6 @@ Route::get('/categories', function(){
         "categories" => Category::all()
     ]);
 });
-
-Route::get('/ww', function () {
-    return view('dashboard.indexx');
-});
-
-
 
 Route::get('/posts', [PostController::class, 'index']);
 
