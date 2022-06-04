@@ -104,6 +104,10 @@ Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'check
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 Route::resource('/dashboard/nabung', DashboardNabungController::class)->middleware('auth');
 Route::resource('/dashboard/tabungan', DashboardTabunganController::class)->middleware('auth');
+Route::get('/dashboard/adminnabung', [DashboardTabunganController::class, 'adminnabung'])->middleware('auth');
+Route::get('/dashboard/detailsiswa', [DashboardTabunganController::class, 'detailsiswa'])->middleware('auth');
+
+
 
 Route::resource('/berita', BeritaController::class);
 

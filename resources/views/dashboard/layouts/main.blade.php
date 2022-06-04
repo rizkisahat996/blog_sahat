@@ -66,6 +66,9 @@
     <script src={{ asset("/assets/js/settings.js") }}></script>
     <script src={{ asset("/assets/js/todolist.js") }}></script>
     <!-- endinject -->
+    {{-- font awesome --}}
+    <script src="https://kit.fontawesome.com/e800405822.js" crossorigin="anonymous"></script>
+
     <!-- Custom js for this page -->
     <!-- End custom js for this page -->
   </body>

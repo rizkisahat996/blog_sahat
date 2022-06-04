@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+
 
 class DashboardTabunganController extends Controller
 {
@@ -13,9 +15,22 @@ class DashboardTabunganController extends Controller
      */
     public function index()
     {
-        return view('dashboard.tabungan.index');
+        $user = User::get();
+        // dd($users);
+        
+        return view('dashboard.tabungan.index',[
+            'user'=>$user
+        ]);
     }
 
+    public function adminnabung()
+    {
+        return view('dashboard.tabungan.nabung');
+    }
+
+    public function detailsiswa(){
+        return view('dashboard.tabungan.detailsiswa');
+    }
     /**
      * Show the form for creating a new resource.
      *

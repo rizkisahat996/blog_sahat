@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('nis')->unique();
             $table->string('username')->unique();
             $table->string('email')->unique();
+            $table->date('tgl_lahir');
+            $table->enum('jenis_kelamin', ['pria', 'wanita']);
+            $table->enum('kelas', ['1', '2', '3', '4', '5', '6']);
+            $table->char('nomor_hp')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password'); 
             $table->string('image')->nullable();

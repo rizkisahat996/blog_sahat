@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+
 
 class DashboardNabungController extends Controller
 {
@@ -11,9 +13,11 @@ class DashboardNabungController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        return view('dashboard.nabung.index');
+        return view('dashboard.nabung.index',[
+
+        ]);
     }
 
     /**

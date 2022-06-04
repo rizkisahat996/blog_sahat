@@ -22,6 +22,10 @@ class DatabaseSeeder extends Seeder
             'nis' => '123456789000',
             'username' => 'admin',
             'email' => 'admin@gmail.com',
+            'jenis_kelamin' => 'pria',
+            'kelas'=>'6',
+            'nomor_hp' => '086969123123',
+            'tgl_lahir'=> '1985-09-17',
             'password' => bcrypt('password'),
             'is_admin' => true
         ]);
