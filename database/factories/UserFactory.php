@@ -25,6 +25,7 @@ class UserFactory extends Factory
             'tgl_lahir' => $this->faker->date(),
             'jenis_kelamin' => $this->faker->randomElement(['pria', 'wanita']),
             'kelas' => $this->faker->randomElement(['1', '2', '3', '4', '5', '6']),
+            'alamat' => $this->faker->address(),
             'nomor_hp' => $this->faker->phoneNumber(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password

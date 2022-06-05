@@ -80,10 +80,14 @@ Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'check
 
 
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
-Route::resource('/dashboard/nabung', DashboardNabungController::class)->middleware('auth');
+Route::resource('/dashboard/requestnabung', DashboardNabungController::class)->middleware('auth');
 Route::resource('/dashboard/tabungan', DashboardTabunganController::class)->middleware('auth');
-Route::get('/dashboard/adminnabung', [DashboardTabunganController::class, 'adminnabung'])->middleware('auth');
-Route::get('/dashboard/detailsiswa', [DashboardTabunganController::class, 'detailsiswa'])->middleware('auth');
+Route::get('/dashboard/adminnabung/{id}', [DashboardTabunganController::class, 'adminnabung'])->middleware('auth');
+Route::get('/dashboard/detailsiswa/{id}', [DashboardTabunganController::class, 'detailsiswa'])->middleware('auth');
+Route::get('/dashboard/createsiswa', [DashboardTabunganController::class, 'createsiswa'])->middleware('auth');
+Route::post('/dashboard/addsiswa', [DashboardTabunganController::class, 'siswaStore'])->middleware('auth');
+Route::post('/dashboard/updatesiswa/{id}', [DashboardTabunganController::class, 'siswaupdate'])->middleware('auth');
+
 
 
 

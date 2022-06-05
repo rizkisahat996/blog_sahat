@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('tgl_lahir');
             $table->enum('jenis_kelamin', ['pria', 'wanita']);
             $table->enum('kelas', ['1', '2', '3', '4', '5', '6']);
+            $table->string('alamat')->nullable(false);
             $table->char('nomor_hp')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password'); 

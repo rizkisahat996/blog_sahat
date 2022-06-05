@@ -69,7 +69,7 @@
       <div class="collapse" id="ui-basic">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item"> <a class="nav-link {{ Request::is('dashboard/tabungan*') ? 'active' : '' }}" href="/dashboard/tabungan">Data Tabungan</a></li>
-          <li class="nav-item"> <a class="nav-link {{ Request::is('dashboard/nabung*') ? 'active' : '' }}" href="/dashboard/nabung">Mari Nabung</a></li>
+          <li class="nav-item"> <a class="nav-link {{ Request::is('dashboard/nabung*') ? 'active' : '' }}" href="/dashboard/requestnabung">Request Nabung</a></li>
         </ul>
       </div>
     </li>

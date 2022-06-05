@@ -15,8 +15,9 @@ class DashboardNabungController extends Controller
      */
     public function index(User $user)
     {
-        return view('dashboard.nabung.index',[
-
+        $user = User::get();
+        return view('dashboard.requestnabung.index',[
+            'user'=>$user
         ]);
     }
 
