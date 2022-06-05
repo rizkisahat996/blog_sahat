@@ -78,6 +78,22 @@
 <div class="d-flex justify-content-center">
   {{ $posts->links() }}
 </div> --}}
+<div class="row justify-content-center mb-3">
+  <div class="col-md-6">
+    <form action="/posts" method="GET">
+      @if (request('category'))
+        <input type="hidden" name="category" value="{{ request('category') }}">
+      @endif
+      @if (request('author'))
+        <input type="hidden" name="author" value="{{ request('author') }}">
+      @endif
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search" name="search" value="{{ request('search') }}">
+        <button class="btn btn-danger" type="submit" id="button-addon2">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
 <section class="hero bg-center bg-cover" style="background: url(https://source.unsplash.com/1080x720?)">
   <div class="dark-overlay py-5">
     <div class="overlay-content">

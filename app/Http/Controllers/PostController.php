@@ -10,7 +10,7 @@ use App\Models\User;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index(User $user)
     {
         $title = '';
         if(request('category')){
