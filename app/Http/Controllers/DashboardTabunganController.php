@@ -23,13 +23,58 @@ class DashboardTabunganController extends Controller
         ]);
     }
 
-    public function adminnabung()
+    public function adminnabung($id)
     {
-        return view('dashboard.tabungan.nabung');
+        $user = User::where('id', $id)->get();
+        return view('dashboard.tabungan.nabung',[
+            'user'=>$user
+        ]);
     }
 
-    public function detailsiswa(){
-        return view('dashboard.tabungan.detailsiswa');
+    public function detailsiswa($id){
+        $user = User::where('id', $id)->get();
+        return view('dashboard.tabungan.detailsiswa',[
+            'user'=>$user
+        ]);
+    }
+
+    public function createsiswa(){
+        return view('dashboard.tabungan.createsiswa');
+    }
+
+    public function siswaStore(Request $request){
+        User::create([
+            'name'=>$request->name,
+            'nis'=>$request->nis,
+            'tgl_lahir'=>$request->tgl_lahir,
+            'kelas'=>$request->kelas,
+            'alamat'=>$request->alamat,
+            'username'=>$request->username,
+            'email'=>$request->email,
+            'password'=>$request->password,
+            'nomor_hp'=>$request->nomor_hp,
+            'jenis_kelamin'=>$request->jenis_kelamin,
+
+        ]);
+        return back();
+    }
+
+    public function siswaupdate(Request $request){
+        User::where('id', $request->id)->update([
+            
+            'name'=>$request->name,
+            'nis'=>$request->nis,
+            'tgl_lahir'=>$request->tgl_lahir,
+            'kelas'=>$request->kelas,
+            'alamat'=>$request->alamat,
+            'username'=>$request->username,
+            'email'=>$request->email,
+            'password'=>$request->password,
+            'nomor_hp'=>$request->nomor_hp,
+            'jenis_kelamin'=>$request->jenis_kelamin,
+
+        ]);
+        return back();
     }
     /**
      * Show the form for creating a new resource.

@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             'username' => 'admin',
             'email' => 'admin@gmail.com',
             'jenis_kelamin' => 'pria',
+            'alamat'=>'jl. kenanga',
             'kelas'=>'6',
             'nomor_hp' => '086969123123',
             'tgl_lahir'=> '1985-09-17',
