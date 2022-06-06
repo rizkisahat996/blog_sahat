@@ -67,7 +67,6 @@ class DashboardTabunganController extends Controller
             'tgl_lahir'=>$request->tgl_lahir,
             'kelas'=>$request->kelas,
             'alamat'=>$request->alamat,
-            'username'=>$request->username,
             'email'=>$request->email,
             'password'=>$request->password,
             'nomor_hp'=>$request->nomor_hp,
