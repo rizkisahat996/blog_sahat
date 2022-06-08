@@ -52,7 +52,7 @@
     </li>
     @if (auth()->user()->status == 'admin')
     <li class="nav-item menu-items">
-      <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" href="/dashboard">
+      <a class="nav-link {{ Request::is('/dashboard') ? 'active' : '' }}" href="/dashboard">
         <span class="menu-icon">
           <i class="mdi mdi-speedometer"></i>
         </span>
@@ -69,14 +69,14 @@
       </a>
       <div class="collapse" id="ui-basic">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link {{ Request::is('dashboard/tabungan*') ? 'active' : '' }}" href="/dashboard/tabungan">Data Tabungan</a></li>
-          <li class="nav-item"> <a class="nav-link {{ Request::is('dashboard/nabung*') ? 'active' : '' }}" href="/dashboard/requestnabung">Request Nabung</a></li>
+          <li class="nav-item"> <a class="nav-link {{ Request::is('/dashboard/tabungan*') ? 'active' : '' }}" href="/dashboard/tabungan">Data Tabungan</a></li>
+          <li class="nav-item"> <a class="nav-link {{ Request::is('/dashboard/nabung*') ? 'active' : '' }}" href="/dashboard/requestnabung">Request Nabung</a></li>
         </ul>
       </div>
     </li>
     @else
     <li class="nav-item menu-items">
-      <a class="nav-link {{ Request::is('profil') ? 'active' : '' }}" href="/profil">
+      <a class="nav-link {{ Request::is('/profil') ? 'active' : '' }}" href="/profil">
         <span class="menu-icon">
           <i class="mdi mdi-speedometer"></i>
         </span>
@@ -84,7 +84,7 @@
       </a>
     </li>
     <li class="nav-item menu-items">
-      <a class="nav-link {{ Request::is('tabungan*') ? 'active' : '' }}" href="/tabungan">
+      <a class="nav-link {{ Request::is('/tabungan*') ? 'active' : '' }}" href="/tabungan">
         <span class="menu-icon">
           <i class="mdi mdi-currency-usd"></i>
         </span>
@@ -93,7 +93,7 @@
     </li>
     @endif
     <li class="nav-item menu-items">
-      <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
+      <a class="nav-link {{ Request::is('/dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
         <span class="menu-icon">
           <i class="mdi mdi-newspaper"></i>
         </span>
