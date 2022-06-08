@@ -14,6 +14,7 @@
                                 <th> Tanggal</th>
                                 <th> Setoran</th>
                                 <th> Total </th>
+                                <th> Bukti</th>
                             </thead>
                             @foreach ($data_setor as $ds)
                                 <tbody>
@@ -24,6 +25,11 @@
                                     <td>-Rp{{$ds->kredit}}</td>
                                     @endif
                                     <td>{{$ds->saldo_akhir}}</td>
+                                    <td width="10%">{{$ds->image}}
+                                        <form action="/insertpoto" method="get" enctype="multipart/form-data">
+                                            <input type="file" name="image" class="btn btn-info"><button type="submit" class="btn btn-info"><i class="fa-solid fa-download"></i></button>
+                                        </form>
+                                    </td>
                                 </tbody>
                             @endforeach
                         </table>
