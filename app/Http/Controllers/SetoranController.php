@@ -14,21 +14,53 @@ class SetoranController extends Controller
 {
     public function index()
     {
-        $data_setor = DB::table('setorans')->get();
-        return view('profilsiswa.dashboard.tabungan',['data_setor'=>$data_setor]);
+        $nis = auth()->user()->id;
+
+
+        $data_setor = DB::table('tabungans')->where('id_user', $nis)->get();
+        return view('dashboard.profilsiswa.tabungan',['data_setor'=>$data_setor]);
     }
 
     public function profil()
     {
+        $nis = auth()->user()->id;
         // $user = User::where('id', $id)->get();
         // return view('profilsiswa.index',['user'=>$user]);
-        $userr = DB::table('users')->get();
-        return view('profilsiswa.index',['userr'=>$userr]);
+        $userr = DB::table('users')->where('id', $nis)->get();
+        return view('dashboard.profilsiswa.index',['userr'=>$userr]);
     }
 
     public function setoranpdf()
     {
-    	$setoran = DB::table('setorans')->get();
-        return view('profilsiswa.dashboard.setoranpdf',['setoran'=>$setoran]);
+        $nis = auth()->user()->id;
+
+    	$setoran = DB::table('tabungans')->where('id_user', $nis)->get();
+        return view('dashboard.profilsiswa.setoranpdf',['setoran'=>$setoran]);
+    }
+
+    public function editprofil(){
+        $nis = auth()->user()->id;
+
+        $user = User::where('id', $nis)->get();
+        return view('dashboard.profilsiswa.editprofil',[
+            'user'=>$user
+        ]);
+    }
+
+    public function updateprofil(Request $request){
+        User::where('id', $request->id)->update([
+            
+            'name'=>$request->name,
+            'nis'=>$request->nis,
+            'tgl_lahir'=>$request->tgl_lahir,
+            // 'kelas'=>$request->kelas,
+            'alamat'=>$request->alamat,
+            'email'=>$request->email,
+            'password'=>$request->password,
+            'nomor_hp'=>$request->nomor_hp,
+            'jenis_kelamin'=>$request->jenis_kelamin,
+
+        ]);
+        return back();
     }
 }

@@ -97,6 +97,10 @@ Route::put('/dashboard/verifikasi', [DashboardNabungController::class, 'verifika
 Route::get('/profil', [SetoranController::class, 'profil']);
 Route::get('/tabungan', [SetoranController::class, 'index']);
 Route::get('/setoranpdf', [SetoranController::class, 'setoranpdf']);
+Route::get('/editprofil', [SetoranController::class, 'editprofil']);
+Route::put('/updateprofil', [SetoranController::class, 'updateprofil']);
+
+
 
 
 Route::resource('/berita', BeritaController::class);

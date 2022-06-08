@@ -90,6 +90,23 @@
       </a>
     </li>
     <li class="nav-item menu-items">
+      <a class="nav-link {{ Request::is('profil') ? 'active' : '' }}" href="/profil">
+        
+        <span class="menu-icon">
+          <i class="mdi mdi-speedometer"></i>
+        </span>
+        <span class="menu-title">Dashboard User</span>
+      </a>
+    </li>
+    <li class="nav-item menu-items">
+      <a class="nav-link {{ Request::is('tabungan*') ? 'active' : '' }}" href="/tabungan">
+        <span class="menu-icon">
+          <i class="mdi mdi-table-large"></i>
+        </span>
+        <span class="menu-title">Tabungan User</span>
+      </a>
+    </li>
+    <li class="nav-item menu-items">
       <a href="/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link" type="submit">
         <span class="menu-icon">
           <i class="mdi mdi mdi-logout"></i>
