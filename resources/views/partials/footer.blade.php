@@ -16,7 +16,6 @@
             </div>
             <div class="col-lg-4 text-center text-lg-end">
               <p class="small text-muted text-uppercase mb-0">BERITA SEKUL </p>
-              <!-- If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!-->
             </div>
           </div>
         </div>

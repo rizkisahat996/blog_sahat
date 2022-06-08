@@ -17,7 +17,7 @@
     </form>
   </div>
 </div>
-<section class="hero bg-center bg-cover" style="background: url(https://source.unsplash.com/1080x720?)">
+<section class="hero bg-center bg-cover" style="background: url(https://source.unsplash.com/1080x720?blog)">
   <div class="dark-overlay py-5">
     <div class="overlay-content">
       <div class="container py-5 text-white text-center">
@@ -39,7 +39,7 @@
               @if ($post->image)
               <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}" class="img-fluid mb-4">
               @else
-              <img class="img-fluid mb-4" src="https://source.unsplash.com/640x480?" alt=""/>
+              <img class="img-fluid mb-4" src="https://source.unsplash.com/640x480?{{ $post->category->name }}" alt=""/>
               @endif
           </a>
             <ul class="list-inline small text-uppercase mb-0">

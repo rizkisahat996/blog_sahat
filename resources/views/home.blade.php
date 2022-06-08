@@ -24,7 +24,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2"><a class="d-block h-100 bg-center bg-cover" href="post.html" style="background: url(https://source.unsplash.com/1080x720?)"></a></div>
+        <div class="col-lg-6 order-1 order-lg-2"><a class="d-block h-100 bg-center bg-cover" href="post.html" style="background: url(https://source.unsplash.com/1080x720?school)"></a></div>
       </div>
     </div>
   </section>

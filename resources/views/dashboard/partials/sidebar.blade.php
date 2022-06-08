@@ -50,6 +50,7 @@
     <li class="nav-item nav-category">
       <span class="nav-link">Navigation</span>
     </li>
+    @if (auth()->user()->status == 'siswa')
     <li class="nav-item menu-items">
       <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" href="/dashboard">
         <span class="menu-icon">
@@ -73,25 +74,9 @@
         </ul>
       </div>
     </li>
-    <li class="nav-item menu-items">
-      <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
-        <span class="menu-icon">
-          <i class="mdi mdi-newspaper"></i>
-        </span>
-        <span class="menu-title">Kelola Berita</span>
-      </a>
-    </li>
-    <li class="nav-item menu-items">
-      <a class="nav-link" href="pages/tables/basic-table.html">
-        <span class="menu-icon">
-          <i class="mdi mdi-table-large"></i>
-        </span>
-        <span class="menu-title">Tables</span>
-      </a>
-    </li>
+    @else
     <li class="nav-item menu-items">
       <a class="nav-link {{ Request::is('profil') ? 'active' : '' }}" href="/profil">
-        
         <span class="menu-icon">
           <i class="mdi mdi-speedometer"></i>
         </span>
@@ -104,6 +89,15 @@
           <i class="mdi mdi-table-large"></i>
         </span>
         <span class="menu-title">Tabungan User</span>
+      </a>
+    </li>
+    @endif
+    <li class="nav-item menu-items">
+      <a class="nav-link {{ Request::is('dashboard/posts*') ? 'active' : '' }}" href="/dashboard/posts">
+        <span class="menu-icon">
+          <i class="mdi mdi-newspaper"></i>
+        </span>
+        <span class="menu-title">Kelola Berita</span>
       </a>
     </li>
     <li class="nav-item menu-items">

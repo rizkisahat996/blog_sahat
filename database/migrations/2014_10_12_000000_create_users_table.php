@@ -30,7 +30,7 @@ return new class extends Migration
             $table->bigInteger('saldo')->default('0');
             $table->rememberToken();
             $table->timestamps();
-            $table->boolean('is_admin')->default(false);
+            $table->enum('status', ['siswa', 'admin'])->default('siswa');
         });
     }
 
