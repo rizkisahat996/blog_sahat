@@ -11,6 +11,7 @@ use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\DashboardNabungController;
 use App\Http\Controllers\DashboardTabunganController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\SetoranController;
 
 
 /*
@@ -88,7 +89,9 @@ Route::get('/dashboard/createsiswa', [DashboardTabunganController::class, 'creat
 Route::post('/dashboard/addsiswa', [DashboardTabunganController::class, 'siswaStore'])->middleware('auth');
 Route::put('/dashboard/updatesiswa/{id}', [DashboardTabunganController::class, 'siswaupdate'])->middleware('auth');
 
-
+Route::get('/profil', [SetoranController::class, 'profil']);
+Route::get('/tabungan', [SetoranController::class, 'index']);
+Route::get('/setoranpdf', [SetoranController::class, 'setoranpdf']);
 
 
 Route::resource('/berita', BeritaController::class);
