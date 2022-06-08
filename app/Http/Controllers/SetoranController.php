@@ -63,4 +63,14 @@ class SetoranController extends Controller
         ]);
         return back();
     }
+
+    public function insertpoto(Request $request){
+
+        $data = Setoran::create($request->all());
+        if($request->hasFile('image')){
+            $request->file('image')->move('image/', $request->file('image')->getClientOriginalName());
+            $data->image =  $request->file('image')->getClientOriginalName();
+            $data->save();
+        }
+    }
 }
