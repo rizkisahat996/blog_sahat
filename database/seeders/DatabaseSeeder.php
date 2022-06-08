@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             'is_admin' => true
         ]);
      
-        User::factory(3)->create();
+        User::factory(8)->create();
 
         Category::create([
             'name' => 'Web-Programming',
