@@ -25,7 +25,7 @@
                         </table>
                         <div>
                         <br>
-                            <a href="/setoranpdf"><button type="button" class="btn btn-success" target="_blank" colspan="2">Cetak <i class="fas fa-print"></i></button></a>
+                            <a href="/setoranpdf" target="_blank"><button type="button" class="btn btn-success"  colspan="2">Cetak <i class="fas fa-print"></i></button></a>
                         </div>
                         </div>
                     </div>
