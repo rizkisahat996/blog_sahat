@@ -16,9 +16,7 @@ class DashboardTabunganController extends Controller
      */
     public function index()
     {
-        $user = User::get();
-        // dd($users);
-        
+        $user = User::get()->paginate(5);
         return view('dashboard.tabungan.index',[
             'user'=>$user
         ]);

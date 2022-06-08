@@ -50,7 +50,7 @@
     <li class="nav-item nav-category">
       <span class="nav-link">Navigation</span>
     </li>
-    @if (auth()->user()->status == 'siswa')
+    @if (auth()->user()->status == 'admin')
     <li class="nav-item menu-items">
       <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" href="/dashboard">
         <span class="menu-icon">
@@ -86,7 +86,7 @@
     <li class="nav-item menu-items">
       <a class="nav-link {{ Request::is('tabungan*') ? 'active' : '' }}" href="/tabungan">
         <span class="menu-icon">
-          <i class="mdi mdi-table-large"></i>
+          <i class="mdi mdi-currency-usd"></i>
         </span>
         <span class="menu-title">Tabungan User</span>
       </a>
