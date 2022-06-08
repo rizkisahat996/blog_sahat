@@ -16,7 +16,7 @@
             <label for="name" class="form-label">Nama</label>
         </div>
         <div class="col-9">
-            <input type="name" class="col form-control" id="name" name="name">
+            <input type="name" class="col form-control text-light" id="name" name="name" required>
         </div>
       </div>
       <!-- NIS -->
@@ -25,7 +25,7 @@
             <label for="name" class="form-label">NIS</label>
         </div>
         <div class="col-9">
-            <input type="number" class="col form-control" id="nis" name="nis" >
+            <input type="number" class="col form-control text-light" id="nis" name="nis" required>
         </div>
       </div>
       <!-- tanggal lahir -->
@@ -34,7 +34,7 @@
             <label for="name" class="form-label">Tanggal lahir</label>
         </div>
         <div class="col-9">
-            <input type="date" class="col form-control" id="tgl_lahir" name="tgl_lahir" >
+            <input type="date" class="col form-control text-light" id="tgl_lahir" name="tgl_lahir" required>
         </div>
       </div>
       <!-- kelas -->
@@ -43,7 +43,7 @@
             <label for="name" class="form-label" >Kelas</label>
         </div>
         <div class="col-9">
-          <select class="form-select" aria-label="Default select example" name="kelas">
+          <select class="form-select" aria-label="Default select example" name="kelas" required>
             <option selected>Kelas</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -60,7 +60,7 @@
             <label for="name" class="form-label">Alamat</label>
         </div>
         <div class="col-9">
-            <input type="name" class="col form-control" id="alamat" name="alamat" >
+            <input type="name" class="col form-control text-light" id="alamat" name="alamat" required>
         </div>
       </div>
       <!-- username -->
@@ -69,7 +69,7 @@
             <label for="name" class="form-label">Username</label>
         </div>
         <div class="col-9">
-            <input type="name" class="col form-control" id="username" name="username">
+            <input type="name" class="col form-control text-light" id="username" name="username" required>
         </div>
       </div>
       <!-- email -->
@@ -78,7 +78,7 @@
             <label for="name" class="form-label">Email</label>
         </div>
         <div class="col-9">
-            <input type="name" class="col form-control" id="email" name="email" >
+            <input type="name" class="col form-control text-light" id="email" name="email" required>
         </div>
       </div>
       <!-- password -->
@@ -87,7 +87,7 @@
             <label for="name" class="form-label">Password</label>
         </div>
         <div class="col-9">
-            <input type="name" class="col form-control" id="password" name="password" >
+            <input type="name" class="col form-control text-light" id="password" name="password" required>
         </div>
       </div>
       <!-- No. Telp -->
@@ -96,7 +96,7 @@
             <label for="name" class="form-label">No. Telp</label>
         </div>
         <div class="col-9">
-            <input type="name" class="col form-control" id="nomor_hp" name="nomor_hp" >
+            <input type="name" class="col form-control text-light" id="nomor_hp" name="nomor_hp" required>
         </div>
       </div>
       <!-- jenis kelamin -->
@@ -105,7 +105,7 @@
             <label for="name" class="form-label">Jenis Kelamin</label>
         </div>
         <div class="col-9">
-          <select class="form-select" aria-label="Default select example" name="jenis_kelamin">
+          <select class="form-select" aria-label="Default select example" name="jenis_kelamin" required>
             <option selected>Jenis Kelamin</option>
             <option value="pria">pria</option>
             <option value="wanita">wanita</option>

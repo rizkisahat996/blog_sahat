@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Tabungan;
 
 
 class DashboardTabunganController extends Controller
@@ -26,10 +27,13 @@ class DashboardTabunganController extends Controller
     public function adminnabung($id)
     {
         $user = User::where('id', $id)->get();
+        $tabungan = Tabungan::where('id_user', $id)->get();
         return view('dashboard.tabungan.nabung',[
-            'user'=>$user
+            'user'=>$user,
+            'tabungan'=>$tabungan
         ]);
     }
+
 
     public function detailsiswa($id){
         $user = User::where('id', $id)->get();
@@ -75,6 +79,36 @@ class DashboardTabunganController extends Controller
         ]);
         return back();
     }
+    public function nabung(Request $request){
+ 
+        $debit = $request->input('debit');
+        $saldo = $request->input('saldo');
+        $saldo_akhir = $debit + $saldo;
+        Tabungan::create([
+            'id_user'=>$request->id_user,
+            'debit'=>$request->debit,
+            'saldo_akhir'=>$saldo_akhir
+        ]);
+        return back();
+ 
+        User::where('id',$request->id)->update([
+            'saldo'=>$saldo_akhir
+        ]);
+    }
+ 
+    public function tarik(Request $request){
+ 
+        $kredit = $request->input('kredit');
+        $saldo = $request->input('saldo');
+        $saldo_akhir = $saldo - $kredit  ;
+        Tabungan::create([
+            'id_user'=>$request->id_user,
+            'kredit'=>$request->kredit,
+            'saldo_akhir'=>$saldo_akhir
+        ]);
+        return back();
+    }
+
     /**
      * Show the form for creating a new resource.
      *

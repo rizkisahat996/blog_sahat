@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('setorans', function (Blueprint $table) {
             $table->id();
             $table->date('tanggal_setor');
-            $table->string('jumlah_setor',50);
-            $table->string('total_uang',50);
+            $table->bigInteger('jumlah_setor');
+            $table->bigInteger('total_uang');
             $table->timestamps();
         });
     }

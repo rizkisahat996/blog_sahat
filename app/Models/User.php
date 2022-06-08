@@ -42,4 +42,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+    public function tabungan()
+    {
+        return $this->hasMany(Tabungan::class);
+    }
+
+    public function request_nabung()
+    {
+        return $this->hasOne(User::class);
+    }
 }

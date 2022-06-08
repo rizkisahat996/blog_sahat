@@ -89,6 +89,11 @@ Route::get('/dashboard/createsiswa', [DashboardTabunganController::class, 'creat
 Route::post('/dashboard/addsiswa', [DashboardTabunganController::class, 'siswaStore'])->middleware('auth');
 Route::put('/dashboard/updatesiswa/{id}', [DashboardTabunganController::class, 'siswaupdate'])->middleware('auth');
 
+Route::post('/dashboard/nabung', [DashboardTabunganController::class, 'nabung'])->middleware('auth');
+Route::post('/dashboard/tarik', [DashboardTabunganController::class, 'tarik'])->middleware('auth');
+Route::put('/dashboard/verifikasi', [DashboardNabungController::class, 'verifikasi'])->middleware('auth');
+
+
 Route::get('/profil', [SetoranController::class, 'profil']);
 Route::get('/tabungan', [SetoranController::class, 'index']);
 Route::get('/setoranpdf', [SetoranController::class, 'setoranpdf']);

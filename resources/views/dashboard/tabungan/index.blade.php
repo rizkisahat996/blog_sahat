@@ -19,6 +19,7 @@
               <th> # </th>
               <th> Nama </th>
               <th> NIS </th>
+              <th> Kelas </th>
               <th colspan="2" class="text-center"> Action </th>
             </tr>
           </thead>
@@ -29,8 +30,12 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{$usr->name }}</td>
               <td>{{$usr->nis }}</td>
-              <td width="10%"><a href="/dashboard/detailsiswa/{{$usr->id}}"><button type="button" class="btn btn-primary"  colspan="2">Detail</button></a>
-                <a href="/dashboard/adminnabung/{{$usr->id}}"><button type="button" class="btn btn-info">Nabung</button></a></td>
+              <td>{{$usr->kelas }}</td>
+              <td width="10%">
+                <a href="/dashboard/detailsiswa/{{$usr->id}}"><button type="button" class="btn btn-primary badge"  colspan="2"><i class="fa-solid fa-user-pen"></i></button></a>
+                <a href="/dashboard/adminnabung/{{$usr->id}}"><button type="button" class="btn btn-info badge"><i class="fa-solid fa-dollar-sign"></i></button></a>
+                <a href="/dashboard/adminnabung/{{$usr->id}}"><button type="button" class="btn btn-danger badge bg-danger"><i class="fa-solid fa-trash-can"></i></button></a>
+              </td>
               </td>
             </tr>
             @endforeach
