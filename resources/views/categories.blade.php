@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-    
+
 <section>
   <div class="container">
     <h1>Featured Categories</h1>
@@ -10,13 +10,16 @@
   <div class="swiper destinations-slider swiper-padding">
     <div class="swiper-wrapper">
       @foreach( $categories as $category)
-      <div class="swiper-slide h-auto"><a class="destination d-flex align-items-end bg-center bg-cover" href="/posts?category={{ $category->slug }}" style="background: url(https://source.unsplash.com/1920x1080?{{ $category->name }})">
+      <div class="swiper-slide h-auto"><a class="destination d-flex align-items-end bg-center bg-cover"
+          href="/posts?category={{ $category->slug }}"
+          style="background: url(https://source.unsplash.com/1920x1080?{{ $category->name }})">
           <div class="destination-inner w-100 text-center text-white index-forward has-transition">
             <p class="small text-uppercase mb-0">Post With</p>
             <h2 class="h3 mb-4">{{ $category->name }}</h2>
             <div class="btn btn-primary w-100 destination-btn text-white">Discover</div>
-          </div></a></div>
-          @endforeach
+          </div>
+        </a></div>
+      @endforeach
     </div>
     <div class="swiper-button-prev swiper-custom-nav text-uppercase letter-spacing-0">
       <svg class="svg-icon svg-icon me-1">
