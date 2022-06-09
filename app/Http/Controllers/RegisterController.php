@@ -22,6 +22,11 @@ class RegisterController extends Controller
             'nis' => ['required', 'min:12', 'max:255'],
             'username' => ['required', 'min:3', 'max:255', 'unique:users'],
             'email' => 'required|email:dns|unique:users',
+            'tgl_lahir' => 'required',
+            'jenis_kelamin' => 'required',
+            'kelas' => 'required',
+            'alamat' => 'required|max:255',
+            'nomor_hp' => 'required|min:8|max:10',
             'password' => 'required|min:8|max:255'
         ]);
 

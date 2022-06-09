@@ -1,7 +1,7 @@
-@extends('login.layouts.main')
+@extends('register.layouts.main')
 
 @section('container')
-<div class="row justify-content-center container-fluid">
+<div class="row justify-content-center container-fluid" id="content-wrap">
   <div class="col-lg-5">
     
     <main class="form-registration">
@@ -39,6 +39,50 @@
             <input type="email" name="email" class="form-control @error('email')is-invalid @enderror" id="email" placeholder="name@example.com" required value="{{ old('email') }}">
             <label for="email">Email address</label>
             @error('email')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+            @enderror
+          </div>
+          <div class="row">
+            <div class="col">
+            <input type="date" class="form-control @error('tgl_lahir')is-invalid @enderror" placeholder="Tanggal Lahir" aria-label="" name="tgl_lahir">
+            @error('tgl_lahir')
+                <div class="invalid-feedback">
+                  {{ $message }}
+                </div>
+                @enderror
+            </div>
+          </div>
+          <div>
+            <select class="form-select" aria-label="Default select example" id="jenis_kelamin" name="jenis_kelamin">
+              <option value="Pria">Pria</option>
+              <option value="Wanita">Wanita</option>
+            </select>
+          </div>
+          <div>
+            <select class="form-select" aria-label="Default select example" id="kelas" name="kelas">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <div class="form-floating">
+            <input type="text" name="alamat" class="form-control rounded-top @error('alamat')is-invalid @enderror" id="alamat" placeholder="123456789000" required value="{{ old('alamat')}}">
+            <label for="alamat">Alamat</label>
+            @error('alamat')
+            <div class="invalid-feedback">
+              {{ $message }}
+            </div>
+            @enderror
+          </div>
+          <div class="form-floating">
+            <input type="text" name="nomor_hp" class="form-control rounded-top @error('nomor_hp')is-invalid @enderror" id="nomor_hp" placeholder="123456789000" required value="{{ old('nomor_hp')}}">
+            <label for="nomor_hp">Nomor HP</label>
+            @error('nomor_hp')
             <div class="invalid-feedback">
               {{ $message }}
             </div>
