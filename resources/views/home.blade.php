@@ -9,7 +9,7 @@
         <div class="h-100 bg-light d-flex align-items-center">
           <div class="py-5 px-4">
             <p class="text-primary font-weight-bold small text-uppercase mb-2">blog</p>
-            <h3 class="h4"> <a class="text-reset" href="#">Ayo Nabung!</a></h3>
+            <h3 class="h4"> <a class="text-reset" href="#">Mari Nabung!</a></h3>
             <div class="text-muted">
               <p>Perkembangan teknologi memberi pengaruh besar bagi segala aspek kehidupan khususnya aspek pendidikan.
                 Hal tersebut dapat diimplementasikan di lingkungan sekolah tentang cara menabung yang efektif dan
