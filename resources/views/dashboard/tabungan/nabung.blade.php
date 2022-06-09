@@ -7,22 +7,20 @@
 <div class="col-lg-12 grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
+      @if(($message = Session::get('errors')))
+        <div class="alert alert-danger alert-block">	
+		      <strong>{{ $message }}</strong>
+	      </div>
+      @elseif(($message = Session::get('success')))
+        <div class="alert alert-success alert-block">	
+          <strong>{{ $message }}</strong>
+        </div>
+      @endif
       <div class="table-responsive">        
           <div class=" pt-2 mb-3"> <h2><a href="/dashboard/tabungan"><i class="fa-solid fa-arrow-left"></i></a>   Data Tabungan</h2></div>
           @foreach($user as $usr)
             <div class="px-2">
             <h1 >{{$usr->name}}</h1>
-            {{-- <div class="mb-3">
-              <form method="post" action="/dashboard/nabung">
-                @csrf
-                
-              <input type="text" class="form-control" id="id_user" name="id_user" value="{{$usr->id}}">
-              <label for="debit" class="form-label">Jumlah Uang</label>
-              <input type="text" class="form-control" id="debit" name="debit" placeholder="masukkan jumlah uang">
-              @foreach($tabungan as $tbgn)
-              <input type="text" class="form-control" id="saldo" name="saldo" value="{{$tbgn->saldo_akhir}}">
-                @endforeach
-            </div> --}}
             <div class="row">
               
               <div class="col-1"><button type="submit" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#addnabung"><h4>Setor</h4></button></div>
@@ -73,7 +71,8 @@
               </table>
             </div>
             <div class="my-3">
-              <button type="button" class="btn btn-info">download data</button>
+              <a href="/dashboard/cetakpdfuser/{{$usr->id}}" target="_blank">
+              <button type="button" class="btn btn-info">download data</button></a>
             </div>
             @endforeach
             </div>

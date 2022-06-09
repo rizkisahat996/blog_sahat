@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             @endforeach
-                            {!! $userr->links() !!}  
+                            {{-- {!! $userr->links() !!}   --}}
                         </div>
                         <div class="card-footer"></div>
                     </div>

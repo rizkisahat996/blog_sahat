@@ -15,6 +15,24 @@
 <body>
 	<div class="form-group">
 		<p align="center"><b>LAPORAN TABUNGAN</b></p>
+		{{-- @foreach($datas as $data)
+		<div class="row">
+			<div class="col">nama		:</div>
+			<div class="col">{{$data->name}}</div>
+		</div>
+		<div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+		<div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+		<div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+		@endforeach --}}
 		@foreach($datas as $data)
 		<table class="static " align="center" rules="all" border="none" style="width:90%;">
 			<tr>

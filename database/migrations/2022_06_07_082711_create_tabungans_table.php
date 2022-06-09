@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('id_user')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->bigInteger('debit')->nullable();
             $table->bigInteger('kredit')->nullable();
-            $table->bigInteger('saldo_akhir')->default('0');
+            $table->bigInteger('saldo_akhir')->unsigned()->default('0');
             $table->string('image')->nullable();
             $table->timestamps();
         });

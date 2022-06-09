@@ -3,6 +3,11 @@
 @section('container')
 <div class="card">
   <div class="card-body">
+    @if(($message = Session::get('success')))
+        <div class="alert alert-success alert-block">	
+          <strong>{{ $message }}</strong>
+        </div>
+      @endif
     <!-- tombol back -->
     <div class="container px-2 pt-2 mb-3"> <h2><a href="/profil"><i class="fa-solid fa-arrow-left"></i></a>   Detail Siswa</h2></div>
     <!-- container siswa -->

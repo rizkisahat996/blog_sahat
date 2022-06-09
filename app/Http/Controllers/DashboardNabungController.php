@@ -17,8 +17,10 @@ class DashboardNabungController extends Controller
      */
     public function index(User $user)
     {
+
         $user = User::get();
         $reqnabung = Request_nabung::join('users','request_nabungs.id_user','=','users.id')->select('users.name','users.nis','request_nabungs.id','request_nabungs.created_at','request_nabungs.image','request_nabungs.jlh_request','request_nabungs.status','request_nabungs.id_user')->get();
+        
         $history = Tabungan::join('users','tabungans.id_user','=','users.id')->get();
         return view('dashboard.requestnabung.index',[
             'user'=>$user,
@@ -34,7 +36,12 @@ class DashboardNabungController extends Controller
             'status'=>'terverfikasi'
             // $request->status
         ]);
-        return back();
+        return back()->with('success', 'Berhasil melakukan verifikasi');
+    }
+
+    public function download(){
+        $path=public_path('storage/bukti_tf/0.jpeg');
+        return respone()->download($path);
     }
 
     /**

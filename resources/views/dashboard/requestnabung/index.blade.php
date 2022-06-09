@@ -1,9 +1,17 @@
 @extends('dashboard.layouts.main')
 
+@include('dashboard.components.modalfoto')
+
+
 @section('container')
 
 <div class="col-lg-12 grid-margin stretch-card">
   <div class="card">
+    @if(($message = Session::get('success')))
+        <div class="alert alert-success alert-block">	
+          <strong>{{ $message }}</strong>
+        </div>
+      @endif
     <div class="card-body">
       <div class="container px-2  mb-3"><h2>Request Nabung</h2></div>
       <div class="table-responsive">
@@ -29,8 +37,13 @@
               <td>{{$req->nis }}</td>
               <td>{{$req->created_at}}</td>
               <td>Rp{{$req->jlh_request}}</td>
-              <td width="10%">{{$req->image}}
-                <a href=""> <button type="button" class="btn btn-info"><i class="fa-solid fa-download"></i></button></a></td>
+              <td width="10%">
+              <div style="max-height: 350px; overflow:hidden">
+                  <img src="{{ asset('storage/' . $req->image) }}" alt="" class="img-fluid mt-3">
+              </div>
+              <button type="submit" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#foto"><i class="fa-solid fa-eye"></i></button>
+             
+              </td>
               </td>
               <td width="16%">
                 <div class="row">
@@ -93,7 +106,7 @@
               <td>{{$req->created_at}}</td>
               <td>Rp{{$req->jlh_request}}</td>
               <td width="10%">{{$req->image}}
-                <a href=""> <button type="button" class="btn btn-info"><i class="fa-solid fa-download"></i></button></a></td>
+                <button type="submit" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#foto"><i class="fa-solid fa-eye"></i></button></td>
               </td>
               <td width="10%"><a href="/dashboard/adminnabung/{{$req->id_user}}"><button type="button" class="btn btn-info"><i class="fa-solid fa-dollar-sign"></i></button></a>
                 </td>

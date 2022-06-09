@@ -42,7 +42,7 @@
           </div>
           <div class="profile-name">
             <h5 class="mb-0 font-weight-normal">{{ auth()->user()->name }}</h5>
-            <span>*insert status here*</span>
+            <span>*Online*</span>
           </div>
         </div>
       </div>
@@ -75,12 +75,13 @@
       </div>
     </li>
     @else
+    {{-- user --}}
     <li class="nav-item menu-items">
-      <a class="nav-link {{ Request::is('/profil') ? 'active' : '' }}" href="/profil">
+      <a class="nav-link {{ Request::is('/dashboard') ? 'active' : '' }}" href="/dashboard">
         <span class="menu-icon">
           <i class="mdi mdi-speedometer"></i>
         </span>
-        <span class="menu-title">Dashboard User</span>
+        <span class="menu-title">Dashboard=</span>
       </a>
     </li>
     <li class="nav-item menu-items">
@@ -88,7 +89,15 @@
         <span class="menu-icon">
           <i class="mdi mdi-currency-usd"></i>
         </span>
-        <span class="menu-title">Tabungan User</span>
+        <span class="menu-title">History</span>
+      </a>
+    </li>
+    <li class="nav-item menu-items">
+      <a class="nav-link {{ Request::is('/viewrequest*') ? 'active' : '' }}" href="/viewrequest">
+        <span class="menu-icon">
+          <i class="mdi mdi-currency-usd"></i>
+        </span>
+        <span class="menu-title">Request Nabung</span>
       </a>
     </li>
     @endif

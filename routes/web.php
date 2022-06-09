@@ -83,13 +83,16 @@ Route::resource('/dashboard/requestnabung', DashboardNabungController::class)->m
 Route::resource('/dashboard/tabungan', DashboardTabunganController::class)->middleware('auth');
 Route::get('/dashboard/adminnabung/{id}', [DashboardTabunganController::class, 'adminnabung'])->middleware('auth');
 Route::get('/dashboard/detailsiswa/{id}', [DashboardTabunganController::class, 'detailsiswa'])->middleware('auth');
+Route::delete('/dashboard/deletesiswa/{id}', [DashboardTabunganController::class, 'deletesiswa'])->middleware('auth');
 Route::get('/dashboard/createsiswa', [DashboardTabunganController::class, 'createsiswa'])->middleware('auth');
 Route::post('/dashboard/addsiswa', [DashboardTabunganController::class, 'siswaStore'])->middleware('auth');
 Route::put('/dashboard/updatesiswa/{id}', [DashboardTabunganController::class, 'siswaupdate'])->middleware('auth');
+Route::get('/dashboard/cetakpdfuser/{id}', [DashboardTabunganController::class, 'cetakpdf'])->middleware('auth');;
 
 Route::post('/dashboard/nabung', [DashboardTabunganController::class, 'nabung'])->middleware('auth');
 Route::post('/dashboard/tarik', [DashboardTabunganController::class, 'tarik'])->middleware('auth');
 Route::put('/dashboard/verifikasi', [DashboardNabungController::class, 'verifikasi'])->middleware('auth');
+Route::get('/dashboard/download', [DashboardNabungController::class, 'download'])->middleware('auth');
 
 
 Route::get('/profil', [SetoranController::class, 'profil']);
@@ -98,6 +101,8 @@ Route::get('/setoranpdf', [SetoranController::class, 'setoranpdf']);
 Route::get('/editprofil', [SetoranController::class, 'editprofil']);
 Route::put('/updateprofil', [SetoranController::class, 'updateprofil']);
 Route::get('/insertpoto', [SetoranController::class, 'insertpoto']);
+Route::get('/viewrequest', [SetoranController::class, 'viewrequest']);
+Route::post('/requestnabung', [SetoranController::class, 'requestnabung']);
 
 
 

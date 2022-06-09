@@ -27,6 +27,7 @@
             {{-- {{dd($users)}} --}}
             @foreach ($user as $usr)
             <tr>
+              {{-- @if(($usr->status==='siswa')) --}}
               <td>{{ $loop->iteration }}</td>
               <td>{{$usr->name }}</td>
               <td>{{$usr->nis }}</td>
@@ -34,9 +35,16 @@
               <td width="10%">
                 <a href="/dashboard/detailsiswa/{{$usr->id}}"><button type="button" class="btn btn-primary badge"  colspan="2"><i class="fa-solid fa-user-pen"></i></button></a>
                 <a href="/dashboard/adminnabung/{{$usr->id}}"><button type="button" class="btn btn-info badge"><i class="fa-solid fa-dollar-sign"></i></button></a>
-                <a href="/dashboard/adminnabung/{{$usr->id}}"><button type="button" class="btn btn-danger badge bg-danger"><i class="fa-solid fa-trash-can"></i></button></a>
+                <form class="d-inline" action="/dashboard/deletesiswa/{{$usr->id}}" method="POST">
+                  @method('delete')
+                  @csrf
+                  <button type="submit" class="btn btn-danger badge bg-danger" onclick="return confirm('Yakin Ingin Menghapus?')"><i class="fa-solid fa-trash-can"></i></button>
+                  {{-- <button class="badge bg-danger border-0" onclick="return confirm('Yakin Ingin Menghapus?')"><span class="mdi mdi-close-circle"></span></button> --}}
+
+                </form>
               </td>
               </td>
+              {{-- @endif --}}
             </tr>
             @endforeach
           </tbody>

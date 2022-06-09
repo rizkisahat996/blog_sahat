@@ -16,7 +16,7 @@ class DashboardTabunganController extends Controller
      */
     public function index()
     {
-        $userr = User::get();
+        $userr = User::where('status', ['siswa'])->get();
         return view('dashboard.tabungan.index',[
             'user'=>$userr
         ]);
@@ -38,6 +38,12 @@ class DashboardTabunganController extends Controller
         return view('dashboard.tabungan.detailsiswa',[
             'user'=>$user
         ]);
+    }
+
+    public function deletesiswa($id){
+        User::where('id', $id)->delete();
+        return back()->with('success', 'User Berhasil dihapus');
+
     }
 
     public function createsiswa(){
@@ -87,7 +93,7 @@ class DashboardTabunganController extends Controller
             'debit'=>$request->debit,
             'saldo_akhir'=>$saldo_akhir
         ]);
-        return back();
+        return back()->with('success', 'Setoran berhasil ditambahkan');
  
         User::where('id',$request->id)->update([
             'saldo'=>$saldo_akhir
@@ -95,17 +101,34 @@ class DashboardTabunganController extends Controller
     }
  
     public function tarik(Request $request){
+
+
  
         $kredit = $request->input('kredit');
         $saldo = $request->input('saldo');
+        if($kredit>$saldo){
+            return back()->with('errors', 'Silahkan ulang! jumlah saldo tidak mencukupi untuk melakukan penarikan');
+        }
         $saldo_akhir = $saldo - $kredit  ;
         Tabungan::create([
             'id_user'=>$request->id_user,
             'kredit'=>$request->kredit,
             'saldo_akhir'=>$saldo_akhir
         ]);
-        return back();
+        return back()->with('success', 'Berhasil melakukan penarikan.');
     }
+
+    public function cetakpdf($id)
+    {
+        // $nis = auth()->user()->id;
+        $datas = User::where('id', $id)->get();
+        $setoran = Tabungan::where('id_user', $id)->get();
+        return view('dashboard.tabungan.cetakpdf',[
+            'setoran'=>$setoran,
+            'datas'=>$datas
+        ]);
+    }
+
 
     /**
      * Show the form for creating a new resource.
