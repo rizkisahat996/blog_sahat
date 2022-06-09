@@ -3,7 +3,13 @@
 @section('container')
 <div class="col-lg-12 grid-margin stretch-card">
   <div class="card">
+    
     <div class="card-body">
+      @if(($message = Session::get('success')))
+        <div class="alert alert-success alert-block">	
+          <strong>{{ $message }}</strong>
+        </div>
+      @endif
       <div class="row px-2">
         <div class="col">
           <div class="container px-1  mb-3"><h2>Data Siswa</h2></div>

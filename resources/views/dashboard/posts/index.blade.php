@@ -5,6 +5,11 @@
 <div class="col-lg-12 grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
+      @if(($message = Session::get('success')))
+        <div class="alert alert-success alert-block">	
+          <strong>{{ $message }}</strong>
+        </div>
+      @endif
       <a class="nav-link btn btn-success create-new-button w-25" id="createbuttonDropdown" href="/dashboard/posts/create">+ Create New Post</a>
       </p>
       <div class="table-responsive">

@@ -81,7 +81,7 @@ class DashboardTabunganController extends Controller
             'jenis_kelamin'=>$request->jenis_kelamin,
 
         ]);
-        return back();
+        return back()->with('success', 'Data berhasil diupdate');
     }
     public function nabung(Request $request){
  

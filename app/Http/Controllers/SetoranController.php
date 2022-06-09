@@ -114,7 +114,7 @@ class SetoranController extends Controller
             'jenis_kelamin'=>$request->jenis_kelamin,
 
         ]);
-        return back()->with('success', 'Berhasil melakukan update profil.');
+        return back();
     }
 
     public function insertpoto(Request $request){

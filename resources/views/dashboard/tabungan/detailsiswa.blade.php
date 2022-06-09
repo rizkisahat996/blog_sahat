@@ -3,21 +3,17 @@
 @section('container')
 <div class="card">
   <div class="card-body">
-    {{-- @if(($message = Session::get('errors')))
-        <div class="alert alert-danger alert-block">	
-		      <strong>{{ $message }}</strong>
-	      </div>
-      @elseif(($message = Session::get('success')))
+    @if(($message = Session::get('success')))
         <div class="alert alert-success alert-block">	
           <strong>{{ $message }}</strong>
         </div>
-      @endif --}}
+      @endif
     <!-- tombol back -->
     <div class="container px-2 pt-2 mb-3"> <h2><a href="/dashboard/tabungan"><i class="fa-solid fa-arrow-left"></i></a>   Detail Siswa</h2></div>
     <!-- container siswa -->
     <div class="container py-3 px-4 mx-5 mb-4">
       @foreach($user as $usr)
-      <form action="/dashboard/updateprofil/{{$usr->id}}" method="post" class=" p-4">
+      <form action="/dashboard/updatesiswa/{{$usr->id}}" method="post" class=" p-4">
         @csrf
         @method('PUT')
                 <input type="hidden" class="col form-controls" id="id" name="id" value="{{old('id', $usr->id)}}">
