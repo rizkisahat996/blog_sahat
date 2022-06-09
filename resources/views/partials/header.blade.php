@@ -45,10 +45,9 @@
   </div>
   <!-- Navbar 1 -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-4">
-    <div class="container text-center"><a class="navbar-brand mx-auto" href="#"><img src="/blog/img/logoo.png" alt=""
-          width="200" height="210">
-        <p class="text-sm text-uppercase text-gray">They Say Schools Are Useless</p>
-        <p class="text-sm text-uppercase text-gray">Unfortunately, Yes They Are Right...</p>
+    <div class="container text-center"><a class="navbar-brand mx-auto" href="#"><img src="/blog/img/nabung.jpeg" alt=""
+          width="400">
+
       </a></div>
   </nav>
   <!-- Navbar 2 -->
