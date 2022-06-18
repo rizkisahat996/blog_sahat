@@ -45,7 +45,7 @@
   </div>
   <!-- Navbar 1 -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white py-4">
-    <div class="container text-center"><a class="navbar-brand mx-auto" href="#"><img src="/blog/img/nabung.jpeg" alt=""
+    <div class="container text-center"><a class="navbar-brand mx-auto" href="#"><img src="/blog/img/nabungwak.png" alt=""
           width="400">
 
       </a></div>
