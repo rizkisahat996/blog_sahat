@@ -27,7 +27,8 @@ use App\Http\Controllers\SetoranController;
 |
 */
 
-Route::get('/', [MajalahController::class, 'index']);
+Route::get('/', [MajalahController::class, 'index'])->name('majalah.index');
+Route::get('majalah/{slug}', [MajalahController::class, 'show'])->name('majalah.show');
 
 Route::get('/categories', function(){
     return view('categories', [

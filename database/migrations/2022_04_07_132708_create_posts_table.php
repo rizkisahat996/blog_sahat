@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->text('exert');  
             $table->text('body');
+            $table->unsignedBigInteger('view')->default(0);
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
