@@ -12,6 +12,7 @@ use App\Http\Controllers\DashboardNabungController;
 use App\Http\Controllers\DashboardTabunganController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MajalahController;
 use App\Http\Controllers\SetoranController;
 
 
@@ -26,11 +27,7 @@ use App\Http\Controllers\SetoranController;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [
-        "title" => "Home",
-    ]);
-});
+Route::get('/', [MajalahController::class, 'index']);
 
 Route::get('/categories', function(){
     return view('categories', [
