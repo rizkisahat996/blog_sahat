@@ -1,7 +1,7 @@
 @extends('majalah.layouts.main')
 
 @section('container')
-
+{{-- update --}}
 <div class="col-lg-8">
     <div class="owl-carousel owl-carousel-2 carousel-item-1 position-relative mb-3 mb-lg-0">
         @foreach ($random as $item)
